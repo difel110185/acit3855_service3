@@ -8,7 +8,7 @@ import requests
 from flask_cors import CORS, cross_origin
 
 try:
-    with open('config/acit3855_service1_log_config.yml', 'r') as f:
+    with open('config/acit3855_service3_log_config.yml', 'r') as f:
         log_config = yaml.safe_load(f.read())
         logging.config.dictConfig(log_config)
 except OSError as e:
@@ -20,7 +20,7 @@ except OSError as e:
 logger = logging.getLogger('basicLogger')
 
 try:
-    with open('config/acit3855_service1_config.yml', 'r') as f:
+    with open('config/acit3855_service3_config.yml', 'r') as f:
         app_config = yaml.safe_load(f.read())
 except OSError as e:
     logger.info("Config file not found. Using default config file.")
